@@ -1,0 +1,10 @@
+# custom
+**/cert
+**/log
+**/venv
+**/*pycache*
+**/Notes.md
+
+# work in progress
+**/aws-lambda
+**/go

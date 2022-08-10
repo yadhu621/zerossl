@@ -1,0 +1,4 @@
+requests==2.26.0
+pyOpenSSL==22.0.0
+boto3==1.23.0
+python-dotenv==0.18.0
