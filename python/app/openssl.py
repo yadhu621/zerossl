@@ -27,9 +27,6 @@ class SSL:
         self.csrpath = '../cert/' + subdomain + '/' + self.cn + '.csr'
         self.crtpath = '../cert/' + subdomain + '/' + self.cn + '.crt'
 
-        # create directory within cert/
-        pathlib.Path('../cert/'+ subdomain).mkdir(parents=True, exist_ok=True)
-        logger.info(f"Created directory {subdomain} within cert/ to store CSR and key")
 
     #Generate the key
     def generate_key_csr(self):
