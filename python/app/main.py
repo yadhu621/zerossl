@@ -2,7 +2,6 @@ import os
 import sys
 import logging
 import pathlib
-from turtle import done
 from zerossl import ZeroSSL
 
 # Setup logger
