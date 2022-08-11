@@ -9,9 +9,8 @@ def main():
     """
     main() function
     """
-    # create log directory if not present
+    # Create log directory if not present
     pathlib.Path('../log/').mkdir(parents=True, exist_ok=True)
-    logger.info(f"Creating log/ directory to store logs")
     
     # Setup logger
     log_format = '%(asctime)s %(levelname)s %(module)s : %(message)s'

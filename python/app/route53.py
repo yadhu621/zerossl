@@ -2,6 +2,10 @@ import os
 import sys
 import boto3
 import logging
+import pathlib
+
+# Create log directory if not present
+pathlib.Path('../log/').mkdir(parents=True, exist_ok=True)
 
 # Setup logger
 log_format = '%(asctime)s %(levelname)s %(module)s : %(message)s'

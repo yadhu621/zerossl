@@ -3,8 +3,12 @@ import json
 import time
 import logging
 import requests
+import pathlib
 from openssl import SSL
 from route53 import Route53
+
+# Create log directory if not present
+pathlib.Path('../log/').mkdir(parents=True, exist_ok=True)
 
 # Setup logger
 log_format = '%(asctime)s %(levelname)s %(module)s : %(message)s'

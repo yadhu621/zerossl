@@ -4,6 +4,9 @@ import logging
 import pathlib
 from OpenSSL import crypto
 
+# Create log directory if not present
+pathlib.Path('../log/').mkdir(parents=True, exist_ok=True)
+
 # Setup logger
 log_format = '%(asctime)s %(levelname)s %(module)s : %(message)s'
 stdout_handler = logging.StreamHandler(sys.stdout)
@@ -28,7 +31,7 @@ class SSL:
         self.crtpath = '../cert/' + subdomain + '/' + self.cn + '.crt'
 
         # create log directory if not present
-        pathlib.Path('../log/'+ subdomain).mkdir(parents=True, exist_ok=True)
+        pathlib.Path('../cert/'+ subdomain).mkdir(parents=True, exist_ok=True)
         logger.info(f"Creating {subdomain}/ directory within log/ to store CSR, key")
         
     #Generate the key
