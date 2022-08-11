@@ -17,5 +17,5 @@ cd app/
 python main.py
 ```
 Certificate will be downloaded to cert/ folder.
-Logs will be written to application.log in log/ folder.
+Logs will be written to STDOUT and application.log in log/ folder.
 
