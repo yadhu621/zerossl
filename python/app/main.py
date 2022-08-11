@@ -33,7 +33,7 @@ def main():
         exit()
         
     if subdomain is None:
-        logger.info("SUBDOMAIN environment variable is not set.  Exiting...")
+        logger.info("SUBDOMAIN environment variable is not set. Exiting...")
         exit()
 
     if aws_access_key_id is None:
@@ -41,7 +41,7 @@ def main():
         exit()
         
     if aws_secret_access_key is None:
-        logger.info("AWS_SECRET_ACCESS_KEY environment variable is not set.  Exiting...")
+        logger.info("AWS_SECRET_ACCESS_KEY environment variable is not set. Exiting...")
         exit()
 
     # create cert directory if not present
