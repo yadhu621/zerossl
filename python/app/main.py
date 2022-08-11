@@ -28,7 +28,6 @@ def main():
     pathlib.Path('../log/'+ subdomain).mkdir(parents=True, exist_ok=True)
     logger.info(f"Creating log/ directory to store logs")
 
-
     if api_key is None:
         logger.info("ZEROSSL_API_KEY environment variable is not set. Exiting...")
         exit()
@@ -44,7 +43,6 @@ def main():
     if aws_secret_access_key is None:
         logger.info("AWS_SECRET_ACCESS_KEY environment variable is not set.  Exiting...")
         exit()
-
 
     # create cert directory if not present
     pathlib.Path('../cert/'+ subdomain).mkdir(parents=True, exist_ok=True)
