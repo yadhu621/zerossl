@@ -4,12 +4,12 @@ import boto3
 import logging
 
 # Setup logger
-LOG_FORMAT = '%(asctime)s %(levelname)s %(module)s : %(message)s'
+log_format = '%(asctime)s %(levelname)s %(module)s : %(message)s'
 stdout_handler = logging.StreamHandler(sys.stdout)
 file_handler = logging.FileHandler("../log/application.log")
 handlers = [stdout_handler, file_handler]
 
-logging.basicConfig(level=logging.INFO, format=LOG_FORMAT, handlers=handlers)
+logging.basicConfig(level=logging.INFO, format=log_format, handlers=handlers)
 logger = logging.getLogger(__name__)
 
 class Route53:

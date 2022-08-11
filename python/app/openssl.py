@@ -5,12 +5,12 @@ import pathlib
 from OpenSSL import crypto
 
 # Setup logger
-LOG_FORMAT = '%(asctime)s %(levelname)s %(module)s : %(message)s'
+log_format = '%(asctime)s %(levelname)s %(module)s : %(message)s'
 stdout_handler = logging.StreamHandler(sys.stdout)
 file_handler = logging.FileHandler("../log/application.log")
 handlers = [stdout_handler, file_handler]
 
-logging.basicConfig(level=logging.INFO, format=LOG_FORMAT, handlers=handlers)
+logging.basicConfig(level=logging.INFO, format=log_format, handlers=handlers)
 logger = logging.getLogger(__name__)
 
 class SSL:
@@ -27,7 +27,10 @@ class SSL:
         self.csrpath = '../cert/' + subdomain + '/' + self.cn + '.csr'
         self.crtpath = '../cert/' + subdomain + '/' + self.cn + '.crt'
 
-
+        # create log directory if not present
+        pathlib.Path('../log/'+ subdomain).mkdir(parents=True, exist_ok=True)
+        logger.info(f"Creating {subdomain}/ directory within log/ to store CSR, key")
+        
     #Generate the key
     def generate_key_csr(self):
         """

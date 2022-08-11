@@ -10,16 +10,16 @@ def main():
     main() function
     """
     # create log directory if not present
-    pathlib.Path('../log/'+ subdomain).mkdir(parents=True, exist_ok=True)
+    pathlib.Path('../log/').mkdir(parents=True, exist_ok=True)
     logger.info(f"Creating log/ directory to store logs")
     
     # Setup logger
-    LOG_FORMAT = '%(asctime)s %(levelname)s %(module)s : %(message)s'
+    log_format = '%(asctime)s %(levelname)s %(module)s : %(message)s'
     stdout_handler = logging.StreamHandler(sys.stdout)
     file_handler = logging.FileHandler("../log/application.log")
     handlers = [stdout_handler, file_handler]
 
-    logging.basicConfig(level=logging.INFO, format=LOG_FORMAT, handlers=handlers)
+    logging.basicConfig(level=logging.INFO, format=log_format, handlers=handlers)
     logger = logging.getLogger(__name__)
 
     api_key = os.environ.get("ZEROSSL_API_KEY")
