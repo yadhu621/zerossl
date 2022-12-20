@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: zerossl
+Version: 0.1.3
+Summary: Interact with ZeroSSL API
+Home-page: https://github.com/yadhu621/zerossl
+Author: Yadhu
+Author-email: yadhu621@gmail.com
+License: MIT
+Description: Package that provides a CLI to interact with ZeroSSL API
+Keywords: zerossl
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
